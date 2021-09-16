@@ -13,7 +13,7 @@
     
     <p><form:errors path="user.*"/></p>
     
-    <form:form method="POST" action="/registration" modelAttribute="user">
+    <form:form method="POST" action="/registerUser" modelAttribute="user">
         <p>
             <form:label path="email">Email:</form:label>
             <form:input path="email"/>
@@ -28,6 +28,20 @@
         </p>
         <input type="submit" value="Register!"/>
     </form:form>
+
+    <h1>Login!</h1>
+    <p><c:out value="${error}" /></p>
+    <form method="post" action="/loginUser">
+        <p>
+            <label type="email" for="email">Email</label>
+            <input type="text" id="email" name="email"/>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
+        </p>
+        <input type="submit" value="Login!"/>
+    </form>    
     
 </body>
 </html>
